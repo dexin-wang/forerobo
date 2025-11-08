@@ -2,11 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <!-- <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos."> -->
+  <!-- <meta name="keywords" content="Nerfies, D-NeRF, NeRF"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>ForeRobo: Unlocking Infinite Simulation Data for 3D Goal-driven Robotic Manipulation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -39,10 +39,31 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <style>
+    .video-row {
+      display: flex;
+      flex-direction: row;      /* 横向排列 */
+      gap: 10px;                /* 两个视频之间的空隙 */
+      justify-content: center;  /* 居中排列 */
+      width: 70%;              /* 确保父容器占满整个可用宽度 */
+      box-sizing: border-box;   /* 确保 padding 不会影响宽度计算 */
+      margin: 0 auto;           /* 防止容器溢出 */
+    }
+
+    .video-row video {
+      width: 50%;               /* 每个视频占父容器的一半宽度 */
+      max-width: 100%;          /* 防止视频超出父容器 */
+      height: auto;             /* 保持视频比例 */
+      object-fit: contain;      /* 保证视频内容适应容器而不变形 */
+    }
+
+  </style>
+
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -80,7 +101,7 @@
     </div>
 
   </div>
-</nav>
+</nav> -->
 
 
 <section class="hero">
@@ -88,39 +109,29 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">ForeRobo: Unlocking Infinite Simulation Data for 3D Goal-driven Robotic Manipulation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <!-- <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span> -->
+              Dexin Wang</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              Faliang Chang</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              Chunsheng Liu</a><sup>1</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Shandong University</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://arxiv.org/pdf/2511.04381"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -129,7 +140,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://arxiv.org/abs/2511.04381"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -138,7 +149,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -146,10 +157,10 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/dexin-wang/foreformer"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -158,14 +169,14 @@
                   </a>
               </span>
               <!-- Dataset Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
                   <span>Data</span>
-                  </a>
+                  </a> -->
             </div>
 
           </div>
@@ -179,17 +190,17 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
+        <source src="./static/videos/5-keyboard-ForeRobo-16x.mp4"
                 type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
+      <!-- <h2 class="subtitle has-text-centered">
         <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
         free-viewpoint
         portraits.
-      </h2>
+      </h2> -->
     </div>
   </div>
-</section>
+</section> 
 
 
 <section class="hero is-light is-small">
@@ -198,49 +209,37 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
+            <source src="./static/videos/1-atomizer-3x.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-chair-tp">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
+            <source src="./static/videos/2-kettle-5x.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-shiba">
           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
+            <source src="./static/videos/3-teabag-3x.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
+            <source src="./static/videos/4-drawer-3x.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-blueshirt">
           <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
+            <source src="./static/videos/5-keyboard-2-1x.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-mask">
           <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
+            <source src="./static/videos/6-laptop-3x.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -258,31 +257,20 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Efficiently leveraging simulation to acquire advanced manipulation skills is both challenging and highly significant.
+            We introduce \textit{ForeRobo}, a generative robotic agent that utilizes generative simulations to autonomously acquire manipulation skills driven by envisioned goal states.
+          Instead of directly learning low-level policies, we advocate integrating generative paradigms with classical control.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            Our approach equips a robotic agent with a self-guided \textit{propose-generate-learn-actuate} cycle. 
+            The agent first proposes the skills to be acquired and constructs the corresponding simulation environments; it then configures objects into appropriate arrangements to generate skill-consistent goal states (\textit{ForeGen}). 
+            Subsequently, the virtually infinite data produced by ForeGen are used to train the proposed state generation model (\textit{ForeFormer}), which establishes point-wise correspondences by predicting the 3D goal position of every point in the current state, based on the scene state and task instructions. 
+          Finally, classical control algorithms are employed to drive the robot in real-world environments to execute actions based on the envisioned goal states.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Compared with end-to-end policy learning methods, ForeFormer offers superior interpretability and execution efficiency. 
+            We train and benchmark ForeFormer across a variety of rigid-body and articulated-object manipulation tasks, and observe an average improvement of 56.32\% over the state-of-the-art state generation models, demonstrating strong generality across different manipulation patterns. 
+            Moreover, in real-world evaluations involving more than 20 robotic tasks, ForeRobo achieves zero-shot sim-to-real transfer and exhibits remarkable generalization capabilities, attaining an average success rate of 79.28\%.
           </p>
         </div>
       </div>
@@ -290,7 +278,7 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -298,120 +286,239 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
   </div>
 </section>
 
 
+
+
 <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
+    <div class="columns is-centered is-flex-direction-column">
+      <h2 class="title is-3">Zero-shot Sim-to-real Experiments and Single-Task Generalization Evaluation</h2>
 
-      <!-- Visual Effects. -->
       <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+        <div class="content">    
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            Atomizer: move atomizer to shelf
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
+          <div class="video-row">
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/1-atomizer-3-3x.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/1-atomizer-3x.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/1-cup-1-3x.mp4"
                       type="video/mp4">
             </video>
           </div>
-
         </div>
       </div>
-    </div>
-    <!--/ Matting. -->
 
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
 
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-3">Visual Effects</h2> -->
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            Kettle: Lift the kettle above the cup and tilt it to pour water
           </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
+          <div class="video-row">
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/2-kettle-1-3x.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/2-kettle-5x.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/2-kettle-newCup-3x.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/2-kettle-newKettle-1-3x.mp4"
+                      type="video/mp4">
+            </video>
           </div>
         </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
       </div>
+
+
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-3">Visual Effects</h2> -->
+          <p>
+            Teabag: put teabag in drawer
+          </p>
+          <div class="video-row">
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/3-teabag-3x.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/3-atomizer-2-3x.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/3-atomizer-2-3x.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-3">Visual Effects</h2> -->
+          <p>
+            Cabinet: open cabinet drawer
+          </p>
+          <div class="video-row">
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/4-drawer-3x.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/4-drawer-halfOpen-3x.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/4-drawer-openhalf-1-3x.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-3">Visual Effects</h2> -->
+          <p>
+            Keyboard: press the key on the keyboard
+          </p>
+          <div class="video-row">
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/5-keyboard-5-1x.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/5-keyboard-2-1x.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/5-keyboard-6-1x.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-3">Visual Effects</h2> -->
+          <p>
+            Laptop: lower the laptop cover
+          </p>
+          <div class="video-row">
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/6-laptop-3x.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/6-laptop-2-3x.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/6-laptop-tilt-1-3x.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <!--/ Animation. -->
+
+
+    <div class="columns is-centered is-flex-direction-column">
+      <h2 class="title is-3">Multi-Task Generalization Evaluation</h2>
+
+      <div class="column">
+        <div class="content">    
+          <p>
+            Level 1:  Pour the tea bag into the plate, Put atomizer from drawer to cabinet
+          </p>
+          <div class="video-row">
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/level1-pour_teabag-3x.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/level1-atomizer2cabinet-3x.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column">
+        <div class="content">    
+          <p>
+            Level 2:  Place the teacup in the person's hand, Press the joystick on the gamepad
+          </p>
+          <div class="video-row">
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/level2-cup2hand-3x.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/level2-gamepad-3x.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="columns is-centered is-flex-direction-column">
+      <h2 class="title is-3">Instruction Sensitivity Evaluation</h2>
+
+      <div class="column">
+        <div class="content">    
+          <p>
+            Pour the teabag into the plate, Place teabag into the plate
+          </p>
+          <div class="video-row">
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/level1-pour_teabag-3x.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/teabag2plate-3x.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
 
 
     <!-- Concurrent Work. -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
@@ -434,14 +541,14 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Concurrent Work. -->
 
   </div>
 </section>
 
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{park2021nerfies,
@@ -451,34 +558,26 @@
   year      = {2021},
 }</code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
+      <!-- <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      </a> -->
+      <!-- <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
-      </a>
+      </a> -->
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            The page is adapted from the <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a> template.
           </p>
         </div>
       </div>
