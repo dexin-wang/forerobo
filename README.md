@@ -1,4 +1,4 @@
-# Nerfies
+# ForeRobo
 
 This is the repository that contains source code for the [ForeRobo website](https://dexin-wang.github.io/forerobo/).
 
